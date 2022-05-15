@@ -35,7 +35,6 @@ body {
 }
 
 .buttons {
-    width: 16%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -46,35 +45,42 @@ input {
 }
 
 label {
-    width: 2vw;
-    height: 2vw;
+    width: 3.5vw;
+    height: 3.5vw;
     border-radius: 2vw;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: rgb(255, 173, 173);
     outline: none;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-label:checked {
+label:checked .button {
     background-color: brown;
   }
 
-label:hover {
+label:hover .button {
     background-color: rgb(255, 112, 112);
-    transition: 0.2s all ease-in;
+   
   }
+
+label:active .button {
+    background-color: gray;
+     transition: 0s;
+}
 
 .text-block {
     width: 50%;
-    font-size: 2vw;
     display: flex;
     text-align: center;
+    flex-direction: column;
 }
 
 .img1 {
-    background-image: url(./img/belarus.jpeg);
+    background-image: url(./img/musk.png);
 }
 
 .img2 {
@@ -82,7 +88,7 @@ label:hover {
 }
 
 .img3 {
-    background-image: url(./img/musk.png);
+    background-image: url(./img/belarus.jpeg);
 }
 
 .img4 {
@@ -99,13 +105,24 @@ label:hover {
 }
 
 .text {
-    display: none;
+    transition: 0.5s;
+    overflow: hidden;
+    font-size: 2vw;
+    line-height: 0vw;
+    opacity: 0;
 }
 
-#image1:checked ~ .down-side .buttons label:nth-of-type(1),
-#image2:checked ~ .down-side .buttons label:nth-of-type(2),
-#image3:checked ~ .down-side .buttons label:nth-of-type(3),
-#image4:checked ~ .down-side .buttons label:nth-of-type(4) {
+.button {
+    width: 60%;
+    height: 60%;
+    border-radius: 50%;
+    background-color: rgb(255, 173, 173);
+}
+
+#image1:checked ~ .down-side .buttons label:nth-of-type(1) .button,
+#image2:checked ~ .down-side .buttons label:nth-of-type(2) .button,
+#image3:checked ~ .down-side .buttons label:nth-of-type(3) .button,
+#image4:checked ~ .down-side .buttons label:nth-of-type(4) .button {
     background-color: brown;
     z-index: 6;
 }
@@ -122,5 +139,6 @@ label:hover {
 #image2:checked ~ .down-side > .text-block .txt2,
 #image3:checked ~ .down-side > .text-block .txt3,
 #image4:checked ~ .down-side > .text-block .txt4 {
-    display: block;
+    line-height: 2vw;
+    opacity: 1;
 }
