@@ -74,19 +74,19 @@ label:hover {
 }
 
 .img1 {
-    background-image: url(../img/belarus.jpeg);
+    background-image: url(./img/belarus.jpeg);
 }
 
 .img2 {
-    background-image: url(../img/foot.jpg);
+    background-image: url(./img/foot.jpg);
 }
 
 .img3 {
-    background-image: url(../img/musk.png);
+    background-image: url(./img/musk.png);
 }
 
 .img4 {
-    background-image: url(../img/toli.jpg);
+    background-image: url(./img/toli.jpg);
 }
 
 .slides {
