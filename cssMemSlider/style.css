@@ -84,7 +84,7 @@ label:active .button {
 }
 
 .img2 {
-    background-image: url(./img/foot.jpg);
+    background-image: url(./img/85.jpg);
 }
 
 .img3 {
@@ -141,4 +141,12 @@ label:active .button {
 #image4:checked ~ .down-side > .text-block .txt4 {
     line-height: 2vw;
     opacity: 1;
+}
+
+@media (min-width: 1px) and (max-width: 768px) {
+    .down-side {
+        flex-direction: column-reverse;
+        height: 15vw;
+        margin-top: 2vw;
+    }
 }
